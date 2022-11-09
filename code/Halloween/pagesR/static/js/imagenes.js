@@ -36,5 +36,5 @@ function forward() {
         which++
         document.images.photoslider.src = photos[which]
     }
-    else window.status = 'End of gallery'
+    else window.status = 'Fin De La Galeria'
 }
