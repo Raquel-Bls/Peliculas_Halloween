@@ -1,0 +1,16 @@
+h5 {
+    color: blue
+}
+
+body {
+    background-color: mistyrose;
+}
+
+p,
+small,
+cite,
+footer {
+    color: rgb(5, 75, 5);
+    font-family: "Times New Roman", Times, serif;
+    font-weight: bold;
+}
