@@ -14,7 +14,7 @@ function retornarHora() {
 
 var photos = new Array()
 var which = 0
-
+var a = ''
 /*Change the below variables to reference your own images. You may have as many images in the slider as you wish*/
 photos[0] = "/static/images/1.jpg"
 photos[1] = "/static/images/2.jpg"
@@ -31,10 +31,18 @@ function backward() {
     }
 }
 
+function wolas() {
+
+    alert(a);
+
+}
+
 function forward() {
     if (which < photos.length - 1) {
         which++
         document.images.photoslider.src = photos[which]
     }
-    else window.status = 'Fin De La Galeria'
+    else {
+        window.status = 'Fin De La Galeria'
+    }
 }

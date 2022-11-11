@@ -42,6 +42,14 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     # Aplicacion para los formularios
     'crispy_forms',
+    # 'social.apps.django_app.default',
+    "django.contrib.sites",  # new
+    # 3rd party
+    "allauth",  # new
+    "allauth.account",  # new
+    "allauth.socialaccount",  # new
+    # social providers
+    "allauth.socialaccount.providers.github",  # new
 ]
 
 MIDDLEWARE = [
@@ -142,6 +150,7 @@ AUTH_USER_MODEL = 'users.CustomUser'  # Creacion usuario personalizado
 LOGIN_REDIRECT_URL = 'home'
 LOGOUT_REDIRECT_URL = 'home'
 
+
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 # --------------- RECUPERACION DE CONTRASEÑA ---------------
@@ -153,3 +162,27 @@ EMAIL_HOST_USER = 'rousalimarquez12@gmail.com'
 EMAIL_HOST_PASSWORD = 'qkckwcutxqppbglp'
 EMAIL = 25
 EMAIL_USE_TLS = True
+
+AUTHENTICATION_BACKENDS = (
+    # Needed to login by username in Django admin, regardless of `allauth`
+    "django.contrib.auth.backends.ModelBackend",
+
+    # `allauth` specific authentication methods, such as login by e-mail
+    # "allauth.account.auth_backends.AuthenticationBackend",
+)
+
+
+SITE_ID = 1  # que es necesario para que Django Allauth funcione.
+# desactiva los correos electrónicos de verificación.
+ACCOUNT_EMAIL_VERIFICATION = "none"
+# cierra la sesión del usuario directamente cuando se hace clic en el botón de cierre de sesión a través de una solicitud GET
+ACCOUNT_LOGOUT_ON_GET = True
+
+
+#ACCOUNT_SESSION_REMEMBER = True
+#ACCOUNT_SIGNUP_PASSWORD_ENTER_TWICE = False
+
+#ACCOUNT_USERNAME_REQUIRED = False
+#ACCOUNT_AUTHENTICATION_METHOD = 'email'
+#ACCOUNT_EMAIL_REQUIRED = True
+#ACCOUNT_UNIQUE_EMAIL = True

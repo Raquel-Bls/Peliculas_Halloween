@@ -11,4 +11,5 @@ urlpatterns = [
          peliculaPageUpdate.as_view(), name='pelicula_editar'),
     path('pelicula/<int:pk>/eliminar/',
          peliculaPageDelete.as_view(), name='pelicula_eliminar'),
+
 ]

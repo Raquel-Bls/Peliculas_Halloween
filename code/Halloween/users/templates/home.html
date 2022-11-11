@@ -1,15 +1,16 @@
-{% extends 'base.html' %}
+{% extends 'base.html' %}{% load socialaccount %}
 {% load static %}
 {% block content %}
 
     <div class="p-3 mb-2 bg-danger   bg-gradient text-white" > <h1> <center> PELICULAS </center> </h1> </div>
-    <!-- <center> <img src="https://4.bp.blogspot.com/-EQWFCsIa-KI/W9ic2rGH66I/AAAAAAAAcjA/HU4a8P24ytAgh89fvToY-bRpwzhQ3PiKgCLcBGAs/s1600/Colage%2BTerror%2BSiglo%2BXXI.jpg" class="img-thumbnail rounded-start" alt="PELICULAS" width="250"></center> -->
+  
+
     <center> <td width="100%"><img src="{% static 'images/1.jpg' %}" width="600" height="440" name="photoslider"></td></center><br> 
     <center>
     <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
       <input class="btn btn-outline-danger btn-xs justify-content-md-end" type="button" value="&lt;&lt;Atras" name="B2" onClick="backward()">
       <input class="btn btn-outline-danger btn-xs justify-content-md-end" type="button" value="Siguiente&gt;&gt;" name="B1" onClick="forward()"><br>
-      <a class="btn btn-danger btn-xs justify-content-md-end" href="home.htm#" onClick="which=1;backward();return false"><small>Comenzar  De Nuevo</small></a>
+      <a class="btn btn-danger btn-xs justify-content-md-end" href="home.html#" onClick="which=1;backward();return false"><small>Comenzar  De Nuevo</small></a>
     </div></center>
 
     <h5>El cine de terror es un género cinematográfico que se caracteriza por su voluntad de provocar en el espectador sensaciones de pavor, terror, miedo, disgusto, repugnancia, horror, incomodidad o preocupación. Sus argumentos frecuentemente desarrollan la súbita intrusión en un ámbito de alguna fuerza, evento o personaje de naturaleza maligna o celestial, a menudo de origen criminal o sobrenatural. </h5>

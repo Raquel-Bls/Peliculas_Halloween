@@ -1,5 +1,5 @@
 
-{% load static %}
+{% load static %}{% load socialaccount %}
 <header>
     <body>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous"/>
@@ -7,6 +7,10 @@
         
         <link rel="stylesheet" href="{% static 'css/base.css' %}">
         <script type="text/javascript" src="{% static 'js/imagenes.js' %}"></script>
+
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Peliculas Halloween</title>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container-xxl">
                 <div class="collapse navbar-collapse" id="navbarScroll">
@@ -52,15 +56,17 @@
                                         <li><a class="dropdown-item" href="{% url 'login' %}">   Login </a></li>
                                         <li><hr class="dropdown-divider"></li>
                                         <li><a class="dropdown-item" href="{% url 'signup' %}">   Registrar </a></li>
+                                        <li><hr class="dropdown-divider"></li>
+                                        <li><a class="dropdown-item" href="{% provider_login_url 'github' %}"> Github </a></li>
                                     </ul>
                                 </li>
+                                
                             </ul>
                         </form>
                     {% endif %}
                 </div>
             </div>
         </nav>
-
     </body>
     <br>
 {% block content %}
